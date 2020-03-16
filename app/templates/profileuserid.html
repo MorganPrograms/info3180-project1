@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div id = "holder">
+<img src = "{{url_for('static', filename = "uploads/"+profile.File)}}"/>
+<h2>{{profile.First_name}} {{profile.Last_name}}</h2>
+
+{{profile.Email}} <br> {{profile.Location}} <br> Joined on {{profile.date_joined}}</p>
+</div>
+<div id = "Bio">
+<h3>About Me</h3>
+{{profile.Biography}}
+<div id = "buttons">
+<button type = "button" id = "Send">Send Message</button> <button type = "button" id = "Follow">Follow</button> 
+</div>
+
+
+
+</div>
+
+{% endblock %}
